@@ -5,13 +5,12 @@ import java.util.*;
 public class Student {
 	
 	String ID;
-	Question studentVotes;
+	String[] studentVotes;
 	
 	// Given a string, create student using the ID
-	public Student(String s, int qType) throws Exception {
+	public Student(String s) {
 		ID = s;
-		Question q = new Question(qType);
-		studentVotes = q;
+		
 	}
 	
 	// When no string value given, construct random student ID
@@ -32,9 +31,4 @@ public class Student {
 		return ID;
 		
 	}
-	
-	public void setStudentAnswer(int index, int choice) {
-		studentVotes.setAnswer(index, choice);
-	}
-
 }
