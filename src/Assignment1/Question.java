@@ -25,4 +25,19 @@ public class Question{
 			
 		}
 	}
+	
+	// Change the value of a key given at the index
+		public void setAnswer(int key, int value) {
+			try {
+				// Sets the question hashmap to a list for indexing
+				List keys = new ArrayList(question.keySet());
+				// Given the index, find the corresponding key (converted to a string type) then change the value
+				question.put(keys.get(key).toString(), value);
+				
+			// Throws an exception if the answer couldn't be set, such as by invalid index
+			} catch (Exception e){
+				System.out.println("Error: Couldn't set answer.");
+				
+			}
+		}
 }

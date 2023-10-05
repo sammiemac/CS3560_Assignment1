@@ -1,16 +1,17 @@
 package Assignment1;
 
-import java.util.Random;
+import java.util.*;
 
 public class Student {
 	
 	String ID;
-	Question studentAnswer;
+	Question studentVotes;
 	
 	// Given a string, create student using the ID
-	public Student(String s) {
+	public Student(String s, int qType) throws Exception {
 		ID = s;
-		
+		Question q = new Question(qType);
+		studentVotes = q;
 	}
 	
 	// When no string value given, construct random student ID
@@ -32,6 +33,8 @@ public class Student {
 		
 	}
 	
-	//TODO: implement studentAnswer
+	public void setStudentAnswer(int index, int choice) {
+		studentVotes.setAnswer(index, choice);
+	}
 
 }
